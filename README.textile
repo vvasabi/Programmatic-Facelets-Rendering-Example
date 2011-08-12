@@ -1,0 +1,3 @@
+h1. Programmatic-Facelets-Rendering-Example
+
+Please see http://www.bradchen.com/blog/2011/07/17/render-facelets-programmatically for more information.
