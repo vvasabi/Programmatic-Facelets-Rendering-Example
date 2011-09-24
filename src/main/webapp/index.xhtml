@@ -10,15 +10,17 @@
 	<h:body>
 		<h1>Example to Render Facelets Programmatically</h1>
 
-		<textarea cols="80"
-			rows="12">#{bean.renderFaceletsPage('page.xhtml')}</textarea>
-
 		<h:form>
+			<textarea cols="80"
+				rows="12">#{bean.renderFaceletsPage('page.xhtml')}</textarea>
+
 			<p>
 				Set bean value:
 				<h:inputText value="#{bean.value}" />
 
-				<h:commandButton value="Update" />
+				<h:commandButton value="Update">
+					<f:ajax execute="@form" render="@form" />
+				</h:commandButton>
 			</p>
 		</h:form>
 	</h:body>
