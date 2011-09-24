@@ -91,18 +91,12 @@ public class FaceletRenderer {
 	}
 
 	/**
-	 * Render a child. Taken from JSF.java of Seam 2.2.
+	 * Render the child and all its children components.
 	 */
 	private void renderChild(FacesContext context, UIComponent child)
 			throws IOException {
 		if (child.isRendered()) {
-			child.encodeBegin(context);
-			if (child.getRendersChildren()) {
-				child.encodeChildren(context);
-			} else {
-				renderChildren(context, child);
-			}
-			child.encodeEnd(context);
+			child.encodeAll(context);
 		}
 	}
 
